@@ -2,7 +2,7 @@
 
 Portafolio profesional.
 
-**Live:** *Se actualizará después del deploy*
+**Live:** [herbert-robles.cofoundy.dev](https://herbert-robles.cofoundy.dev/)
 
 ## Tech Stack
 
