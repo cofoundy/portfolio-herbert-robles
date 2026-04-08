@@ -1,0 +1,53 @@
+---
+import { siteConfig } from "../config";
+
+const icons: Record<string, string> = {
+  eye: `<svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+  lens: `<svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg>`,
+  scan: `<svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 14.625v6h6.75v-6h-6.75z"/></svg>`,
+};
+---
+
+<section id="expertise" class="py-16 md:py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <!-- Section header -->
+    <div class="text-center mb-12 reveal">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-primary-dark)]">
+        Subespecialidades
+      </h2>
+      <div class="mt-3 w-16 h-1 mx-auto bar-shimmer rounded-full"></div>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      {siteConfig.expertise.map((item, i) => (
+        <div class={`reveal stagger-${i + 1} group`}>
+          <div class="card-hover bg-white rounded-xl border border-[var(--color-surface)] p-6 md:p-8 h-full flex flex-col">
+            <!-- Icon -->
+            <div class="w-16 h-16 rounded-xl bg-[var(--color-surface-light)] flex items-center justify-center text-[var(--color-primary)] mb-5 group-hover:bg-[var(--color-surface)] transition-colors">
+              <Fragment set:html={icons[item.icon]} />
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg md:text-xl font-bold text-[var(--color-primary-dark)] mb-2">
+              {item.title}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-sm text-gray-600 leading-relaxed mb-5 flex-1">
+              {item.description}
+            </p>
+
+            <!-- Metric -->
+            <div class="pt-4 border-t border-[var(--color-surface)] flex items-baseline gap-2">
+              <span class="text-2xl font-bold text-[var(--color-primary)] font-numbers" style="font-family: 'Space Grotesk', sans-serif;">
+                {item.metric}
+              </span>
+              <span class="text-xs text-gray-500">{item.metricLabel}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

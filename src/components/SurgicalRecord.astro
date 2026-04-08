@@ -1,0 +1,145 @@
+---
+/**
+ * SurgicalRecord — UNIQUE SECTION
+ * Animated surgical counter with progress bars.
+ * Uses Intersection Observer for counter animation.
+ */
+import { siteConfig } from "../config";
+
+const { cataracts, vitrectomies, grandTotal } = siteConfig.surgicalRecord;
+
+const counters = [
+  { value: cataracts.total, label: "Cirugias de Catarata", color: "var(--color-primary)" },
+  { value: vitrectomies.total, label: "Vitrectomias", color: "var(--color-primary-light)" },
+  { value: grandTotal, label: "Total Cirugias Oculares", color: "var(--color-primary-dark)" },
+];
+
+const allBreakdown = [
+  ...cataracts.breakdown.map(b => ({ ...b, type: "Cataratas" })),
+];
+---
+
+<section id="trayectoria" class="py-16 md:py-20" style={`background: ${siteConfig.colors.primaryDark};`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <!-- Section header -->
+    <div class="text-center mb-12 reveal">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+        Trayectoria Quirurgica
+      </h2>
+      <p class="mt-3 text-blue-200 text-sm md:text-base max-w-2xl mx-auto">
+        Mas de una decada dedicada a devolver la vision. Cada numero representa un paciente atendido.
+      </p>
+      <div class="mt-4 w-16 h-1 mx-auto bg-[var(--color-primary-light)] rounded-full"></div>
+    </div>
+
+    <!-- Counter grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mb-12" id="counter-section">
+      {counters.map((counter, i) => (
+        <div class={`reveal stagger-${i + 1} text-center`}>
+          <div class="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6 md:p-8">
+            <div
+              class="text-4xl sm:text-5xl md:text-6xl font-bold text-white counter-value"
+              data-target={counter.value}
+              style="font-family: 'Space Grotesk', sans-serif;"
+            >
+              0
+            </div>
+            <div class="mt-2 text-sm text-blue-200">{counter.label}</div>
+            <!-- Small bar indicator -->
+            <div class="mt-4 w-full h-1 rounded-full bg-white/10 overflow-hidden">
+              <div
+                class="h-full rounded-full bar-fill"
+                style={`background: ${counter.color}; width: ${Math.round((counter.value / grandTotal) * 100)}%;`}
+              ></div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Breakdown detail -->
+    <div class="reveal grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Cataracts breakdown -->
+      <div class="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 md:p-6">
+        <h3 class="text-sm font-semibold text-blue-200 uppercase tracking-wider mb-4">Cirugias de Catarata</h3>
+        <div class="space-y-3">
+          {cataracts.breakdown.map((item) => (
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-white/80">{item.place}</span>
+                <span class="text-white font-semibold font-numbers" style="font-family: 'Space Grotesk', sans-serif;">{item.count}</span>
+              </div>
+              <div class="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+                <div
+                  class="h-full rounded-full bg-[var(--color-primary)] bar-fill"
+                  style={`width: ${Math.round((item.count / cataracts.total) * 100)}%;`}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Vitrectomies breakdown -->
+      <div class="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 md:p-6">
+        <h3 class="text-sm font-semibold text-blue-200 uppercase tracking-wider mb-4">Vitrectomias</h3>
+        <div class="space-y-3">
+          {vitrectomies.breakdown.map((item) => (
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-white/80">{item.place}</span>
+                <span class="text-white font-semibold font-numbers" style="font-family: 'Space Grotesk', sans-serif;">{item.count}</span>
+              </div>
+              <div class="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+                <div
+                  class="h-full rounded-full bg-[var(--color-primary-light)] bar-fill"
+                  style={`width: ${Math.round((item.count / vitrectomies.total) * 100)}%;`}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Animated counter with Intersection Observer
+  function animateCounters() {
+    const counters = document.querySelectorAll('.counter-value[data-target]');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          const target = parseInt(el.dataset.target || '0');
+          const duration = 2000;
+          const startTime = performance.now();
+
+          function update(currentTime: number) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(eased * target);
+            el.textContent = current.toLocaleString('es-PE');
+
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              el.textContent = target.toLocaleString('es-PE') + '+';
+            }
+          }
+
+          requestAnimationFrame(update);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    counters.forEach(counter => observer.observe(counter));
+  }
+
+  animateCounters();
+</script>

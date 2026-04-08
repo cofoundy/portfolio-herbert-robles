@@ -1,0 +1,94 @@
+---
+/**
+ * Formation — Vertical timeline with geographic journey.
+ * Custom component for Dr. Robles' academic/professional path.
+ */
+import { siteConfig } from "../config";
+
+const typeColors: Record<string, string> = {
+  work: "var(--color-primary-dark)",
+  fellowship: "var(--color-primary)",
+  education: "var(--color-primary-light)",
+};
+
+const typeLabels: Record<string, string> = {
+  work: "Practica Actual",
+  fellowship: "Fellowship",
+  education: "Formacion",
+};
+
+const locationFlags: Record<string, string> = {
+  "Lima, Peru": "PE",
+  "Buenos Aires, Argentina": "AR",
+  "Trujillo, Peru": "PE",
+};
+---
+
+<section id="formacion" class="py-16 md:py-20 bg-[var(--color-surface-light)]">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <!-- Section header -->
+    <div class="text-center mb-12 reveal">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-primary-dark)]">
+        Formacion y Trayectoria
+      </h2>
+      <p class="mt-3 text-gray-600 text-sm md:text-base">
+        De Trujillo a Buenos Aires y de vuelta a Lima — un camino de especializacion continua.
+      </p>
+      <div class="mt-4 w-16 h-1 mx-auto bar-shimmer rounded-full"></div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Vertical line -->
+      <div class="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-[var(--color-surface)]"></div>
+
+      <div class="space-y-8">
+        {siteConfig.formation.map((item, i) => (
+          <div class={`reveal stagger-${Math.min(i + 1, 4)} relative pl-12 md:pl-20`}>
+            <!-- Timeline dot -->
+            <div
+              class="absolute left-2.5 md:left-6.5 top-1 w-3 h-3 rounded-full border-2 border-white shadow-sm"
+              style={`background: ${typeColors[item.type] || "var(--color-primary)"};`}
+            ></div>
+
+            <!-- Card -->
+            <div class="card-hover bg-white rounded-xl border border-[var(--color-surface)] p-5 md:p-6 shadow-sm">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
+                <div>
+                  <span
+                    class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold text-white mb-2"
+                    style={`background: ${typeColors[item.type] || "var(--color-primary)"};`}
+                  >
+                    {typeLabels[item.type] || item.type}
+                  </span>
+                  <h3 class="text-base md:text-lg font-bold text-[var(--color-primary-dark)]">
+                    {item.title}
+                  </h3>
+                </div>
+                <span class="text-xs font-semibold text-[var(--color-primary)] whitespace-nowrap font-numbers" style="font-family: 'Space Grotesk', sans-serif;">
+                  {item.year}
+                </span>
+              </div>
+
+              <p class="text-sm font-semibold text-gray-700 mb-1">
+                {item.institution}
+              </p>
+
+              <div class="flex items-center gap-1.5 text-xs text-gray-500 mb-2">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/>
+                </svg>
+                {item.location}
+              </div>
+
+              <p class="text-sm text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
