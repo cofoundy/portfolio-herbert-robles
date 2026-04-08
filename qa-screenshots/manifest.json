@@ -1,0 +1,126 @@
+{
+  "url": "https://herbert-robles.cofoundy.dev",
+  "timestamp": "2026-04-08T18:56:36.544Z",
+  "desktop": {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "full": {
+      "file": "desktop-full.png",
+      "fileSize": "675KB"
+    },
+    "sections": [
+      {
+        "file": "desktop-hero.png",
+        "section": "hero",
+        "height": 549,
+        "fileSize": "229KB"
+      },
+      {
+        "file": "desktop-expertise.png",
+        "section": "expertise",
+        "height": 587,
+        "fileSize": "47KB"
+      },
+      {
+        "file": "desktop-trayectoria.png",
+        "section": "trayectoria",
+        "height": 768,
+        "fileSize": "53KB"
+      },
+      {
+        "file": "desktop-formacion.png",
+        "section": "formacion",
+        "height": 1178,
+        "fileSize": "99KB"
+      },
+      {
+        "file": "desktop-investigacion.png",
+        "section": "investigacion",
+        "height": 996,
+        "fileSize": "102KB"
+      },
+      {
+        "file": "desktop-donde-atiendo.png",
+        "section": "donde-atiendo",
+        "height": 526,
+        "fileSize": "41KB"
+      },
+      {
+        "file": "desktop-contacto.png",
+        "section": "contacto",
+        "height": 402,
+        "fileSize": "32KB"
+      },
+      {
+        "file": "desktop-footer-7.png",
+        "section": "footer-7",
+        "height": 201,
+        "fileSize": "9KB"
+      }
+    ],
+    "pageHeight": 5264
+  },
+  "mobile": {
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "full": {
+      "file": "mobile-full.png",
+      "fileSize": "497KB"
+    },
+    "sections": [
+      {
+        "file": "mobile-hero.png",
+        "section": "hero",
+        "height": 704,
+        "fileSize": "104KB"
+      },
+      {
+        "file": "mobile-expertise.png",
+        "section": "expertise",
+        "height": 1148,
+        "fileSize": "49KB"
+      },
+      {
+        "file": "mobile-trayectoria.png",
+        "section": "trayectoria",
+        "height": 1282,
+        "fileSize": "55KB"
+      },
+      {
+        "file": "mobile-formacion.png",
+        "section": "formacion",
+        "height": 1404,
+        "fileSize": "87KB"
+      },
+      {
+        "file": "mobile-investigacion.png",
+        "section": "investigacion",
+        "height": 1534,
+        "fileSize": "98KB"
+      },
+      {
+        "file": "mobile-donde-atiendo.png",
+        "section": "donde-atiendo",
+        "height": 902,
+        "fileSize": "42KB"
+      },
+      {
+        "file": "mobile-contacto.png",
+        "section": "contacto",
+        "height": 464,
+        "fileSize": "25KB"
+      },
+      {
+        "file": "mobile-footer-7.png",
+        "section": "footer-7",
+        "height": 201,
+        "fileSize": "8KB"
+      }
+    ],
+    "pageHeight": 7704
+  }
+}

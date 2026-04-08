@@ -1,0 +1,183 @@
+% Harvard-Format Professional CV — Dr. Herbert Cristian Robles Oncoy
+% Compile with: xelatex cv-robles.tex
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.6in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+\definecolor{headrule}{HTML}{0C2D48}
+\definecolor{linkblue}{HTML}{1565C0}
+
+\hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=linkblue, pdfborder={0 0 0}}
+
+\titleformat{\section}
+  {\large\bfseries\centering}
+  {}
+  {0em}
+  {\vspace{-0.4em}\hrulefill\quad}[\quad\hrulefill\vspace{-0.4em}]
+\titlespacing{\section}{0pt}{0.6em}{0.3em}
+
+\setlist[itemize]{nosep, left=0pt, label=\textbullet, itemsep=1pt, topsep=2pt}
+
+\pagestyle{empty}
+
+\newcommand{\entry}[4]{%
+  \noindent\textbf{#1} \hfill #2 \par\nopagebreak
+  \textit{#3} \hfill \textit{#4} \par\nopagebreak
+}
+
+\begin{document}
+
+% ============================================
+% HEADER
+% ============================================
+\begin{center}
+  {\LARGE\bfseries Dr. Herbert Cristian Robles Oncoy} \\[4pt]
+  \faIcon{map-marker-alt}\enspace Jesus Maria, Lima, Peru
+  \quad\faIcon{envelope}\enspace \href{mailto:roblescristian78@gmail.com}{roblescristian78@gmail.com}
+  \quad\faIcon{phone}\enspace +51 987 001 069
+  \\[2pt]
+  \faIcon{globe}\enspace \href{https://herbert-robles.cofoundy.dev}{herbert-robles.cofoundy.dev}
+\end{center}
+
+\vspace{-0.4em}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{-0.8em}
+
+% ============================================
+% PROFESSIONAL SUMMARY
+% ============================================
+\section{Professional Summary}
+
+Medico Cirujano Oftalmologo subespecialista en Retina y Vitreo con mas de 10 anos de experiencia clinica y quirurgica. Mas de 1,750 cirugias oculares realizadas, incluyendo 680+ vitrectomias y 1,074 cirugias de catarata. Fellowship en Cirugia de Retina y Vitreo en la Fundacion Zambrano, Buenos Aires, Argentina. Miembro de sociedades internacionales (PAAO, EURETINA, SARyV). Investigador con presentaciones en WOC y ARVO.
+
+% ============================================
+% EDUCATION
+% ============================================
+\section{Education}
+
+\entry{Universidad Nacional Mayor de San Marcos (UNMSM)}{Lima, Peru}{Medico Especialista en Oftalmologia --- RNE: 41493}{2021}
+\begin{itemize}
+  \item Hospital Nacional Edgardo Rebagliati Martins -- EsSalud
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Universidad Cesar Vallejo}{Trujillo, La Libertad, Peru}{Medico Cirujano --- CMP: 70451}{2015}
+\begin{itemize}
+  \item Habilitado por el Colegio Medico del Peru
+  \item ENAM: 15.50 --- SERUMS 2do puesto regional La Libertad
+\end{itemize}
+\vspace{0.3em}
+
+% ============================================
+% FELLOWSHIP & POSTGRADUATE
+% ============================================
+\section{Fellowship \& Postgraduate Training}
+
+\entry{Fundacion Zambrano -- Cirugia Ocular}{Buenos Aires, Argentina}{Fellowship en Cirugia de Retina y Vitreo}{Ene 2022 -- Jun 2023}
+\begin{itemize}
+  \item 18 meses de entrenamiento quirurgico subespecializado
+  \item 245 vitrectomias realizadas como primer cirujano
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Pontificia Universidad Catolica Argentina (UCA)}{Buenos Aires, Argentina}{Diplomado: Curso Universitario de Posgrado en Retina (100 horas)}{Ago 2022 -- Mar 2023}
+\vspace{0.3em}
+
+% ============================================
+% EXPERIENCE
+% ============================================
+\section{Professional Experience}
+
+\entry{Hospital Nacional Edgardo Rebagliati Martins -- EsSalud}{Lima, Peru}{Medico Cirujano Oftalmologo--Retina, Unidad de Retina}{Sep 2023 -- Presente}
+\begin{itemize}
+  \item Atencion clinico-quirurgica en la Unidad de Retina del hospital mas grande del Peru
+  \item 366 vitrectomias + 27 fijaciones de IOL a esclera + 295 facoemulsificaciones
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Clinica de Especialidades Oftalmologicas}{Lima, Peru}{Staff Clinico-Quirurgico en Oftalmologia--Retina}{Nov 2023 -- Presente}
+\begin{itemize}
+  \item 166 cirugias de catarata + 47 vitrectomias
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Clinica Oftalmos SAC}{Lima, Peru}{Staff Clinico-Quirurgico en Oftalmologia--Retina}{Nov 2023 -- Presente}
+\begin{itemize}
+  \item 59 cirugias de catarata + 22 vitrectomias
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Instituto Damos Vision}{Lima, Peru}{Medico Oftalmologo}{Jul 2020 -- Jun 2021}
+\vspace{0.3em}
+
+\entry{Sanidad de la Policia Nacional del Peru}{Huamachuco, La Libertad, Peru}{SERUMS --- Ingreso por concurso nacional (2do puesto regional)}{May 2015 -- May 2016}
+\vspace{0.3em}
+
+% ============================================
+% SURGICAL RECORD
+% ============================================
+\section{Surgical Record}
+
+\begin{tabularx}{\textwidth}{@{}l X r@{}}
+\textbf{Cirugias de Catarata} & (facoemulsificacion, LIO torica, incision pequena) & \textbf{1,074} \\
+\textbf{Vitrectomias} & (retina y vitreo) & \textbf{680+} \\
+\textbf{Fijaciones IOL a esclera} & & \textbf{27} \\
+\hline
+\textbf{Total Cirugias Oculares} & & \textbf{1,750+} \\
+\end{tabularx}
+
+% ============================================
+% RESEARCH & PUBLICATIONS
+% ============================================
+\section{Research \& Publications}
+
+\begin{itemize}
+  \item \textbf{E-Poster 495-PO}: ``Epidemiology of Retinopathy of Prematurity in the National Hospital Edgardo Rebagliati.'' \textit{World Ophthalmology Congress (WOC)}, Jun 2020.
+  \item \textbf{Poster 4605-B0411}: ``Retinopathy Of Prematurity Information System (ROPIS), A Tool For Research And Surveillance Of Neonatal Care Quality In 8 Public Sector Hospital In Peru.'' \textit{ARVO}, May 2020.
+  \item \textbf{Presentacion en Panel}: ``Retina on the Rocks -- Cirugia Vitreo-Retinal compleja.'' \textit{XVIII Congreso Internacional SARyV}, 2022.
+\end{itemize}
+
+% ============================================
+% RECOGNITION
+% ============================================
+\section{Recognition}
+
+\begin{itemize}
+  \item Ponencia: ``Exudacion Peridiscal, y ahora que hacemos?'' -- Consejo Argentino de Oftalmologia (CAO), 2022
+  \item Ponencia: ``Sindrome de ojo seco'' -- Centro Nacional de Telemedicina, EsSalud, 2021
+  \item Carta de Felicitacion por servicios extraordinarios -- HNERM, 2018
+\end{itemize}
+
+% ============================================
+% SOCIETIES
+% ============================================
+\section{Scientific Societies}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{PAAO} & Asociacion Panamericana de Oftalmologia --- ID: 68424 \\
+\textbf{EURETINA} & European Society of Retina Specialists --- ID: 4447 \\
+\textbf{SARyV} & Sociedad Argentina de Retina y Vitreo \\
+\end{tabularx}
+
+% ============================================
+% SKILLS
+% ============================================
+\section{Skills \& Additional}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{Clinical:} & Cirugia de retina y vitreo, facoemulsificacion, OCT, angiografia retinal, retinopatia del prematuro, trauma ocular, degeneracion macular \\
+\textbf{Languages:} & Espanol (nativo) \\
+\end{tabularx}
+
+\end{document}
