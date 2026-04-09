@@ -4,6 +4,8 @@
  * Shows publications, presentations, and professional recognition.
  */
 import { siteConfig } from "../config";
+import BrandIcon from "./BrandIcon.astro";
+import { getIconInfo } from "../utils/icons";
 ---
 
 <section id="investigacion" class="py-16 md:py-20 bg-white">
@@ -80,10 +82,14 @@ import { siteConfig } from "../config";
         <div class="space-y-3">
           {siteConfig.societies.map((soc) => (
             <div class="flex items-center gap-3 p-3 rounded-lg bg-[var(--color-surface-light)] border border-[var(--color-surface)]">
-              <div class="w-10 h-10 rounded-lg bg-[var(--color-primary-dark)] flex items-center justify-center flex-shrink-0">
-                <span class="text-xs font-bold text-white" style="font-family: 'Space Grotesk', sans-serif;">
-                  {soc.name.slice(0, 3)}
-                </span>
+              <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0 overflow-hidden p-1">
+                {soc.logo && getIconInfo(soc.logo).file ? (
+                  <BrandIcon name={soc.logo} size={28} />
+                ) : (
+                  <span class="text-xs font-bold text-[var(--color-primary-dark)]" style="font-family: 'Space Grotesk', sans-serif;">
+                    {soc.name.slice(0, 3)}
+                  </span>
+                )}
               </div>
               <div class="min-w-0">
                 <p class="text-sm font-semibold text-[var(--color-primary-dark)] truncate">

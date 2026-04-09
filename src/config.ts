@@ -83,6 +83,7 @@ export const siteConfig = {
       institution: "Hospital Nacional Edgardo Rebagliati Martins",
       location: "Lima, Peru",
       type: "work",
+      logo: "essalud",
       description:
         "Atencion clinico-quirurgica en la Unidad de Retina. Staff en Clinica de Especialidades Oftalmologicas y Clinica Oftalmos SAC.",
     },
@@ -92,6 +93,7 @@ export const siteConfig = {
       institution: "Fundacion Zambrano - Cirugia Ocular",
       location: "Buenos Aires, Argentina",
       type: "fellowship",
+      logo: "fundacionzambrano",
       description:
         "18 meses de entrenamiento quirurgico subespecializado. 245 vitrectomias como primer cirujano.",
     },
@@ -101,6 +103,7 @@ export const siteConfig = {
       institution: "Universidad Nacional Mayor de San Marcos (UNMSM)",
       location: "Lima, Peru",
       type: "education",
+      logo: "unmsm",
       description:
         "RNE: 41493. Hospital Nacional Edgardo Rebagliati Martins - EsSalud.",
     },
@@ -110,6 +113,7 @@ export const siteConfig = {
       institution: "Universidad Cesar Vallejo",
       location: "Trujillo, Peru",
       type: "education",
+      logo: "ucv",
       description:
         "CMP: 70451. SERUMS en Sanidad PNP Huamachuco - 2do puesto regional.",
     },
@@ -162,16 +166,19 @@ export const siteConfig = {
       name: "PAAO",
       fullName: "Asociacion Panamericana de Oftalmologia",
       id: "68424",
+      logo: "paao",
     },
     {
       name: "EURETINA",
       fullName: "European Society of Retina Specialists",
       id: "4447",
+      logo: "euretina",
     },
     {
       name: "SARyV",
       fullName: "Sociedad Argentina de Retina y Vitreo",
       id: "",
+      logo: "saryv",
     },
   ],
 
@@ -181,18 +188,21 @@ export const siteConfig = {
       type: "Hospital - EsSalud",
       area: "Unidad de Retina",
       location: "Jesus Maria, Lima",
+      logo: "essalud",
     },
     {
       name: "Clinica de Especialidades Oftalmologicas",
       type: "Clinica Privada",
       area: "Oftalmologia - Retina",
       location: "Lima",
+      logo: "",
     },
     {
       name: "Clinica Oftalmos SAC",
       type: "Clinica Privada",
       area: "Oftalmologia - Retina",
       location: "Lima",
+      logo: "",
     },
   ],
 

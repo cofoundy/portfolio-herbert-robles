@@ -7,7 +7,7 @@ import path from "node:path";
 
 export interface IconInfo {
   file: string | null;
-  format: "svg" | "png" | null;
+  format: "svg" | "png" | "jpg" | null;
   ratio: number; // width/height — 1.0 = square, 3.0 = wide logotype
   isLogotype: boolean; // true if ratio > 1.8 (text-based logo, don't show text next to it)
 }
@@ -45,6 +45,11 @@ export function getIconInfo(name: string): IconInfo {
     const pngPath = path.join(iconsDir, `${candidate}.png`);
     if (fs.existsSync(pngPath)) {
       return { file: `${candidate}.png`, format: "png", ratio: 1, isLogotype: false };
+    }
+
+    const jpgPath = path.join(iconsDir, `${candidate}.jpg`);
+    if (fs.existsSync(jpgPath)) {
+      return { file: `${candidate}.jpg`, format: "jpg", ratio: 1, isLogotype: false };
     }
   }
 

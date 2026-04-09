@@ -1,5 +1,7 @@
 ---
 import { siteConfig } from "../config";
+import BrandIcon from "./BrandIcon.astro";
+import { getIconInfo } from "../utils/icons";
 ---
 
 <section id="hero" class="relative overflow-hidden" style={`background: linear-gradient(135deg, ${siteConfig.colors.surfaceLight} 0%, ${siteConfig.colors.surface} 50%, white 100%);`}>
@@ -16,7 +18,8 @@ import { siteConfig } from "../config";
 
         <!-- Credential badges -->
         <div class="hero-badges mt-5 flex flex-wrap justify-center md:justify-start gap-2">
-          <span class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-[var(--color-primary-dark)] text-white" style="font-family: 'Space Grotesk', sans-serif;">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[var(--color-primary-dark)] text-white" style="font-family: 'Space Grotesk', sans-serif;">
+            {getIconInfo("cmp").file && <BrandIcon name="cmp" size={14} dark />}
             CMP {siteConfig.credentials.cmp}
           </span>
           <span class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-[var(--color-primary)] text-white" style="font-family: 'Space Grotesk', sans-serif;">
@@ -27,7 +30,8 @@ import { siteConfig } from "../config";
         <!-- Society pills -->
         <div class="hero-badges mt-3 flex flex-wrap justify-center md:justify-start gap-2">
           {siteConfig.societies.map((s) => (
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white border border-[var(--color-primary-light)]/30 text-[var(--color-primary-dark)]">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white border border-[var(--color-primary-light)]/30 text-[var(--color-primary-dark)]">
+              {s.logo && getIconInfo(s.logo).file && <BrandIcon name={s.logo} size={14} />}
               {s.name}
             </span>
           ))}
@@ -47,11 +51,16 @@ import { siteConfig } from "../config";
         </div>
       </div>
 
-      <!-- Avatar side (SVG initials - no photo) -->
+      <!-- Profile photo -->
       <div class="flex-shrink-0 order-1 md:order-2 hero-photo">
         <div class="relative">
-          <div class="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-[var(--color-primary-dark)] to-[var(--color-primary)] flex items-center justify-center shadow-2xl">
-            <span class="text-5xl md:text-7xl font-bold text-white" style="font-family: 'DM Serif Display', serif;">HR</span>
+          <div class="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-[var(--color-surface)] to-[var(--color-surface-light)] overflow-hidden shadow-2xl">
+            <img
+              src="/profile.png"
+              alt={`Dr. ${siteConfig.shortName}`}
+              class="w-full h-full object-cover object-top"
+              loading="eager"
+            />
           </div>
           <!-- Decorative ring -->
           <div class="absolute -inset-3 rounded-2xl border-2 border-[var(--color-primary-light)]/20 -z-10"></div>

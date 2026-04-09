@@ -4,6 +4,7 @@
  * Custom component for Dr. Robles' academic/professional path.
  */
 import { siteConfig } from "../config";
+import BrandIcon from "./BrandIcon.astro";
 
 const typeColors: Record<string, string> = {
   work: "var(--color-primary-dark)",
@@ -70,9 +71,10 @@ const locationFlags: Record<string, string> = {
                 </span>
               </div>
 
-              <p class="text-sm font-semibold text-gray-700 mb-1">
-                {item.institution}
-              </p>
+              <div class="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-1">
+                {item.logo && <BrandIcon name={item.logo} size={20} />}
+                <span>{item.institution}</span>
+              </div>
 
               <div class="flex items-center gap-1.5 text-xs text-gray-500 mb-2">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
