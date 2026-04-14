@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Dr. Herbert Cristian Robles Oncoy",
   shortName: "Dr. Herbert Robles",
-  title: "Cirujano de Retina y Vitreo",
+  title: "Cirujano de Retina y Vítreo",
   description:
-    "Medico Cirujano Oftalmologo subespecialista en Retina y Vitreo. Mas de 1,750 cirugias oculares. Fellowship en Argentina. Atencion en Lima, Peru.",
+    "Médico Cirujano Oftalmólogo subespecialista en Retina y Vítreo. Más de 1,750 cirugías oculares. Fellowship en Argentina. Atención en Lima, Perú.",
 
   colors: {
     primaryDark: "#0C2D48",
@@ -14,7 +14,7 @@ export const siteConfig = {
     surfaceLight: "#F0F6FF",
   },
 
-  tagline: "Especialista en Cirugia de Retina y Vitreo",
+  tagline: "Especialista en Cirugía de Retina y Vítreo",
 
   credentials: {
     cmp: "70451",
@@ -22,35 +22,35 @@ export const siteConfig = {
   },
 
   stats: [
-    { value: "1,750+", label: "Cirugias Oculares" },
-    { value: "10+", label: "Anos de Experiencia" },
+    { value: "1,750+", label: "Cirugías Oculares" },
+    { value: "10+", label: "Años de Experiencia" },
     { value: "3", label: "Sociedades Internacionales" },
   ],
 
   expertise: [
     {
       icon: "eye",
-      title: "Cirugia de Retina y Vitreo",
+      title: "Cirugía de Retina y Vítreo",
       description:
-        "Vitrectomias, desprendimiento de retina, membrana epirretiniana, hemorragia vitrea.",
+        "Vitrectomías, desprendimiento de retina, membrana epirretiniana, hemorragia vítrea.",
       metric: "680+",
-      metricLabel: "vitrectomias realizadas",
+      metricLabel: "vitrectomías realizadas",
     },
     {
       icon: "lens",
-      title: "Cirugia de Catarata",
+      title: "Cirugía de Catarata",
       description:
-        "Facoemulsificacion con implante de lente intraocular, LIO torica, incision pequena.",
+        "Facoemulsificación con implante de lente intraocular, LIO tórica, incisión pequeña.",
       metric: "1,074",
-      metricLabel: "cirugias de catarata",
+      metricLabel: "cirugías de catarata",
     },
     {
       icon: "scan",
-      title: "Diagnostico Retinal",
+      title: "Diagnóstico Retinal",
       description:
-        "Tomografia de coherencia optica (OCT), angiografia retinal, manejo de retinopatia del prematuro.",
+        "Tomografía de coherencia óptica (OCT), angiografía retinal, manejo de retinopatía del prematuro.",
       metric: "10+",
-      metricLabel: "anos de practica clinica",
+      metricLabel: "años de práctica clínica",
     },
   ],
 
@@ -60,8 +60,8 @@ export const siteConfig = {
       breakdown: [
         { place: "HNERM (residentado)", count: 548 },
         { place: "HNERM (unidad retina)", count: 301 },
-        { place: "Clinica Esp. Oftalmologicas", count: 166 },
-        { place: "Clinica Oftalmos SAC", count: 59 },
+        { place: "Clínica Esp. Oftalmológicas", count: 166 },
+        { place: "Clínica Oftalmos SAC", count: 59 },
       ],
     },
     vitrectomies: {
@@ -69,8 +69,8 @@ export const siteConfig = {
       breakdown: [
         { place: "HNERM", count: 393 },
         { place: "Fund. Zambrano (Argentina)", count: 245 },
-        { place: "Clinica Esp. Oftalmologicas", count: 47 },
-        { place: "Clinica Oftalmos SAC", count: 22 },
+        { place: "Clínica Esp. Oftalmológicas", count: 47 },
+        { place: "Clínica Oftalmos SAC", count: 22 },
       ],
     },
     grandTotal: 1754,
@@ -79,29 +79,29 @@ export const siteConfig = {
   formation: [
     {
       year: "2023 - Actualidad",
-      title: "Cirujano de Retina y Vitreo",
+      title: "Cirujano de Retina y Vítreo",
       institution: "Hospital Nacional Edgardo Rebagliati Martins",
-      location: "Lima, Peru",
+      location: "Lima, Perú",
       type: "work",
       logo: "essalud",
       description:
-        "Atencion clinico-quirurgica en la Unidad de Retina. Staff en Clinica de Especialidades Oftalmologicas y Clinica Oftalmos SAC.",
+        "Atención clínico-quirúrgica en la Unidad de Retina. Staff en Clínica de Especialidades Oftalmológicas y Clínica Oftalmos SAC.",
     },
     {
       year: "2022 - 2023",
-      title: "Fellowship en Cirugia de Retina y Vitreo",
-      institution: "Fundacion Zambrano - Cirugia Ocular",
+      title: "Fellowship en Cirugía de Retina y Vítreo",
+      institution: "Fundación Zambrano - Cirugía Ocular",
       location: "Buenos Aires, Argentina",
       type: "fellowship",
       logo: "fundacionzambrano",
       description:
-        "18 meses de entrenamiento quirurgico subespecializado. 245 vitrectomias como primer cirujano.",
+        "18 meses de entrenamiento quirúrgico subespecializado. 245 vitrectomías como primer cirujano.",
     },
     {
       year: "2021",
-      title: "Medico Especialista en Oftalmologia",
+      title: "Médico Especialista en Oftalmología",
       institution: "Universidad Nacional Mayor de San Marcos (UNMSM)",
-      location: "Lima, Peru",
+      location: "Lima, Perú",
       type: "education",
       logo: "unmsm",
       description:
@@ -109,9 +109,9 @@ export const siteConfig = {
     },
     {
       year: "2015",
-      title: "Medico Cirujano",
-      institution: "Universidad Cesar Vallejo",
-      location: "Trujillo, Peru",
+      title: "Médico Cirujano",
+      institution: "Universidad César Vallejo",
+      location: "Trujillo, Perú",
       type: "education",
       logo: "ucv",
       description:
@@ -135,27 +135,27 @@ export const siteConfig = {
       id: "4605 - B0411",
     },
     {
-      title: "Retina on the Rocks - Cirugia Vitreo-Retinal compleja",
+      title: "Retina on the Rocks - Cirugía Vítreo-Retinal compleja",
       venue: "XVIII Congreso Internacional SARyV",
       year: "2022",
-      type: "Presentacion en Panel",
+      type: "Presentación en Panel",
       id: "",
     },
   ],
 
   recognitions: [
     {
-      title: "Ponencia: Exudacion Peridiscal",
-      institution: "Consejo Argentino de Oftalmologia (CAO)",
+      title: "Ponencia: Exudación Peridiscal",
+      institution: "Consejo Argentino de Oftalmología (CAO)",
       year: "2022",
     },
     {
-      title: "Ponencia: Sindrome de ojo seco",
+      title: "Ponencia: Síndrome de ojo seco",
       institution: "Centro Nacional de Telemedicina - EsSalud",
       year: "2021",
     },
     {
-      title: "Carta de Felicitacion por servicios extraordinarios",
+      title: "Carta de Felicitación por servicios extraordinarios",
       institution: "Hospital Nacional Edgardo Rebagliati Martins",
       year: "2018",
     },
@@ -164,7 +164,7 @@ export const siteConfig = {
   societies: [
     {
       name: "PAAO",
-      fullName: "Asociacion Panamericana de Oftalmologia",
+      fullName: "Asociación Panamericana de Oftalmología",
       id: "68424",
       logo: "paao",
     },
@@ -176,7 +176,7 @@ export const siteConfig = {
     },
     {
       name: "SARyV",
-      fullName: "Sociedad Argentina de Retina y Vitreo",
+      fullName: "Sociedad Argentina de Retina y Vítreo",
       id: "",
       logo: "saryv",
     },
@@ -187,20 +187,20 @@ export const siteConfig = {
       name: "Hospital Nacional Edgardo Rebagliati Martins",
       type: "Hospital - EsSalud",
       area: "Unidad de Retina",
-      location: "Jesus Maria, Lima",
+      location: "Jesús María, Lima",
       logo: "essalud",
     },
     {
-      name: "Clinica de Especialidades Oftalmologicas",
-      type: "Clinica Privada",
-      area: "Oftalmologia - Retina",
+      name: "Clínica de Especialidades Oftalmológicas",
+      type: "Clínica Privada",
+      area: "Oftalmología - Retina",
       location: "Lima",
       logo: "",
     },
     {
-      name: "Clinica Oftalmos SAC",
-      type: "Clinica Privada",
-      area: "Oftalmologia - Retina",
+      name: "Clínica Oftalmos SAC",
+      type: "Clínica Privada",
+      area: "Oftalmología - Retina",
       location: "Lima",
       logo: "",
     },
@@ -209,10 +209,10 @@ export const siteConfig = {
   cta: {
     title: "Agende su Consulta",
     description:
-      "Confie el cuidado de su vision en manos especializadas. Mas de 1,750 cirugias oculares respaldan mi experiencia.",
+      "Confíe el cuidado de su visión en manos especializadas. Más de 1,750 cirugías oculares respaldan mi experiencia.",
     buttonText: "Contactar por WhatsApp",
     phone: "+51987001069",
-    emailSubject: "Consulta Oftalmologica - Dr. Herbert Robles",
+    emailSubject: "Consulta Oftalmológica - Dr. Herbert Robles",
   },
 
   social: {

@@ -9,9 +9,9 @@ import { siteConfig } from "../config";
 const { cataracts, vitrectomies, grandTotal } = siteConfig.surgicalRecord;
 
 const counters = [
-  { value: cataracts.total, label: "Cirugias de Catarata", color: "var(--color-primary)" },
-  { value: vitrectomies.total, label: "Vitrectomias", color: "var(--color-primary-light)" },
-  { value: grandTotal, label: "Total Cirugias Oculares", color: "var(--color-primary-dark)" },
+  { value: cataracts.total, label: "Cirugías de Catarata", color: "var(--color-primary)" },
+  { value: vitrectomies.total, label: "Vitrectomías", color: "var(--color-primary-light)" },
+  { value: grandTotal, label: "Total Cirugías Oculares", color: "var(--color-primary-dark)" },
 ];
 
 const allBreakdown = [
@@ -24,10 +24,10 @@ const allBreakdown = [
     <!-- Section header -->
     <div class="text-center mb-12 reveal">
       <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
-        Trayectoria Quirurgica
+        Trayectoria Quirúrgica
       </h2>
       <p class="mt-3 text-blue-200 text-sm md:text-base max-w-2xl mx-auto">
-        Mas de una decada dedicada a devolver la vision. Cada numero representa un paciente atendido.
+        Más de una década dedicada a devolver la visión. Cada número representa un paciente atendido.
       </p>
       <div class="mt-4 w-16 h-1 mx-auto bg-[var(--color-primary-light)] rounded-full"></div>
     </div>
@@ -61,7 +61,7 @@ const allBreakdown = [
     <div class="reveal grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Cataracts breakdown -->
       <div class="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 md:p-6">
-        <h3 class="text-sm font-semibold text-blue-200 uppercase tracking-wider mb-4">Cirugias de Catarata</h3>
+        <h3 class="text-sm font-semibold text-blue-200 uppercase tracking-wider mb-4">Cirugías de Catarata</h3>
         <div class="space-y-3">
           {cataracts.breakdown.map((item) => (
             <div>
@@ -82,7 +82,7 @@ const allBreakdown = [
 
       <!-- Vitrectomies breakdown -->
       <div class="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 md:p-6">
-        <h3 class="text-sm font-semibold text-blue-200 uppercase tracking-wider mb-4">Vitrectomias</h3>
+        <h3 class="text-sm font-semibold text-blue-200 uppercase tracking-wider mb-4">Vitrectomías</h3>
         <div class="space-y-3">
           {vitrectomies.breakdown.map((item) => (
             <div>
