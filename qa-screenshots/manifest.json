@@ -1,6 +1,6 @@
 {
   "url": "https://herbert-robles.cofoundy.dev",
-  "timestamp": "2026-04-24T17:02:20.765Z",
+  "timestamp": "2026-04-24T17:07:30.641Z",
   "desktop": {
     "viewport": {
       "width": 1280,
@@ -33,7 +33,7 @@
         "file": "desktop-formacion.png",
         "section": "formacion",
         "height": 1155,
-        "fileSize": "103KB"
+        "fileSize": "104KB"
       },
       {
         "file": "desktop-investigacion.png",
@@ -88,7 +88,7 @@
         "file": "mobile-trayectoria.png",
         "section": "trayectoria",
         "height": 1182,
-        "fileSize": "57KB"
+        "fileSize": "58KB"
       },
       {
         "file": "mobile-formacion.png",
