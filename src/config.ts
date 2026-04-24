@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Dr. Herbert Cristian Robles Oncoy",
-  shortName: "Dr. Herbert Robles",
-  title: "Cirujano de Retina y Vítreo",
+  name: "Dr. Cristian Robles",
+  shortName: "Dr. Cristian Robles",
+  title: "Cirujano de Catarata, Retina y Mácula",
   description:
-    "Médico Cirujano Oftalmólogo subespecialista en Retina y Vítreo. Más de 1,750 cirugías oculares. Fellowship en Argentina. Atención en Lima, Perú.",
+    "Médico Cirujano Oftalmólogo especialista en Cirugía de Catarata, Retina y Mácula. Más de 2,500 cirugías oculares. Fellowship en Argentina. Atención en Lima, Perú.",
 
   colors: {
     primaryDark: "#0C2D48",
@@ -14,7 +14,7 @@ export const siteConfig = {
     surfaceLight: "#F0F6FF",
   },
 
-  tagline: "Especialista en Cirugía de Retina y Vítreo",
+  tagline: "Especialista en Cirugía de Catarata, Retina y Mácula",
 
   credentials: {
     cmp: "70451",
@@ -22,7 +22,7 @@ export const siteConfig = {
   },
 
   stats: [
-    { value: "1,750+", label: "Cirugías Oculares" },
+    { value: "2,500+", label: "Cirugías Oculares" },
     { value: "10+", label: "Años de Experiencia" },
     { value: "3", label: "Sociedades Internacionales" },
   ],
@@ -33,7 +33,7 @@ export const siteConfig = {
       title: "Cirugía de Retina y Vítreo",
       description:
         "Vitrectomías, desprendimiento de retina, membrana epirretiniana, hemorragia vítrea.",
-      metric: "680+",
+      metric: "1000+",
       metricLabel: "vitrectomías realizadas",
     },
     {
@@ -41,14 +41,14 @@ export const siteConfig = {
       title: "Cirugía de Catarata",
       description:
         "Facoemulsificación con implante de lente intraocular, LIO tórica, incisión pequeña.",
-      metric: "1,074",
+      metric: "1500+",
       metricLabel: "cirugías de catarata",
     },
     {
       icon: "scan",
-      title: "Diagnóstico Retinal",
+      title: "Retina Clínica",
       description:
-        "Tomografía de coherencia óptica (OCT), angiografía retinal, manejo de retinopatía del prematuro.",
+        "Degeneración macular, miopía degenerativa, oclusiones vasculares, tomografía de coherencia óptica (OCT) y angiografía retiniana.",
       metric: "10+",
       metricLabel: "años de práctica clínica",
     },
@@ -56,24 +56,25 @@ export const siteConfig = {
 
   surgicalRecord: {
     cataracts: {
-      total: 1074,
+      total: 1500,
       breakdown: [
-        { place: "HNERM (residentado)", count: 548 },
-        { place: "HNERM (unidad retina)", count: 301 },
-        { place: "Clínica Esp. Oftalmológicas", count: 166 },
-        { place: "Clínica Oftalmos SAC", count: 59 },
+        { label: "Cataratas seniles" },
+        { label: "Cataratas complicadas" },
+        { label: "Catarata y miopía" },
+        { label: "Catarata e hipermetropía" },
+        { label: "Catarata y astigmatismo" },
       ],
     },
     vitrectomies: {
-      total: 680,
+      total: 1000,
       breakdown: [
-        { place: "HNERM", count: 393 },
-        { place: "Fund. Zambrano (Argentina)", count: 245 },
-        { place: "Clínica Esp. Oftalmológicas", count: 47 },
-        { place: "Clínica Oftalmos SAC", count: 22 },
+        { label: "Desprendimiento de retina" },
+        { label: "Membrana epirretiniana" },
+        { label: "Hemorragia vítrea" },
+        { label: "Agujero macular" },
       ],
     },
-    grandTotal: 1754,
+    grandTotal: 2500,
   },
 
   formation: [
@@ -84,8 +85,7 @@ export const siteConfig = {
       location: "Lima, Perú",
       type: "work",
       logo: "essalud",
-      description:
-        "Atención clínico-quirúrgica en la Unidad de Retina. Staff en Clínica de Especialidades Oftalmológicas y Clínica Oftalmos SAC.",
+      description: "Atención clínico-quirúrgica en la Unidad de Retina.",
     },
     {
       year: "2022 - 2023",
@@ -209,14 +209,14 @@ export const siteConfig = {
   cta: {
     title: "Agende su Consulta",
     description:
-      "Confíe el cuidado de su visión en manos especializadas. Más de 1,750 cirugías oculares respaldan mi experiencia.",
+      "Confíe el cuidado de su visión en manos especializadas. Más de 2,500 cirugías oculares respaldan mi experiencia.",
     buttonText: "Contactar por WhatsApp",
-    phone: "+51987001069",
-    emailSubject: "Consulta Oftalmológica - Dr. Herbert Robles",
+    phone: "+51944759657",
+    emailSubject: "Consulta Oftalmológica - Dr. Cristian Robles",
   },
 
   social: {
     email: "roblescristian78@gmail.com",
-    phone: "+51987001069",
+    phone: "+51944759657",
   },
 };

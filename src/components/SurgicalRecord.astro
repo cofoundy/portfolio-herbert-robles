@@ -13,10 +13,6 @@ const counters = [
   { value: vitrectomies.total, label: "Vitrectomías", color: "var(--color-primary-light)" },
   { value: grandTotal, label: "Total Cirugías Oculares", color: "var(--color-primary-dark)" },
 ];
-
-const allBreakdown = [
-  ...cataracts.breakdown.map(b => ({ ...b, type: "Cataratas" })),
-];
 ---
 
 <section id="trayectoria" class="py-16 md:py-20" style={`background: ${siteConfig.colors.primaryDark};`}>
@@ -62,20 +58,12 @@ const allBreakdown = [
       <!-- Cataracts breakdown -->
       <div class="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 md:p-6">
         <h3 class="text-sm font-semibold text-blue-200 uppercase tracking-wider mb-4">Cirugías de Catarata</h3>
-        <div class="space-y-3">
+        <div class="flex flex-wrap gap-2">
           {cataracts.breakdown.map((item) => (
-            <div>
-              <div class="flex justify-between text-sm mb-1">
-                <span class="text-white/80">{item.place}</span>
-                <span class="text-white font-semibold font-numbers" style="font-family: 'Space Grotesk', sans-serif;">{item.count}</span>
-              </div>
-              <div class="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
-                <div
-                  class="h-full rounded-full bg-[var(--color-primary)] bar-fill"
-                  style={`width: ${Math.round((item.count / cataracts.total) * 100)}%;`}
-                ></div>
-              </div>
-            </div>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/15 bg-white/5 text-white/90 text-xs sm:text-sm">
+              <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-primary-light)]"></span>
+              {item.label}
+            </span>
           ))}
         </div>
       </div>
@@ -83,20 +71,12 @@ const allBreakdown = [
       <!-- Vitrectomies breakdown -->
       <div class="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 md:p-6">
         <h3 class="text-sm font-semibold text-blue-200 uppercase tracking-wider mb-4">Vitrectomías</h3>
-        <div class="space-y-3">
+        <div class="flex flex-wrap gap-2">
           {vitrectomies.breakdown.map((item) => (
-            <div>
-              <div class="flex justify-between text-sm mb-1">
-                <span class="text-white/80">{item.place}</span>
-                <span class="text-white font-semibold font-numbers" style="font-family: 'Space Grotesk', sans-serif;">{item.count}</span>
-              </div>
-              <div class="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
-                <div
-                  class="h-full rounded-full bg-[var(--color-primary-light)] bar-fill"
-                  style={`width: ${Math.round((item.count / vitrectomies.total) * 100)}%;`}
-                ></div>
-              </div>
-            </div>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/15 bg-white/5 text-white/90 text-xs sm:text-sm">
+              <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-primary-light)]"></span>
+              {item.label}
+            </span>
           ))}
         </div>
       </div>
