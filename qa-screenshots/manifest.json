@@ -1,6 +1,6 @@
 {
-  "url": "https://herbert-robles.cofoundy.dev",
-  "timestamp": "2026-04-24T17:07:30.641Z",
+  "url": "https://herbert-robles.cofoundy.dev?cb=1778014213",
+  "timestamp": "2026-05-05T20:50:20.948Z",
   "desktop": {
     "viewport": {
       "width": 1280,
@@ -8,7 +8,7 @@
     },
     "full": {
       "file": "desktop-full.png",
-      "fileSize": "681KB"
+      "fileSize": "679KB"
     },
     "sections": [
       {
@@ -27,13 +27,13 @@
         "file": "desktop-trayectoria.png",
         "section": "trayectoria",
         "height": 688,
-        "fileSize": "54KB"
+        "fileSize": "53KB"
       },
       {
         "file": "desktop-formacion.png",
         "section": "formacion",
         "height": 1155,
-        "fileSize": "104KB"
+        "fileSize": "103KB"
       },
       {
         "file": "desktop-investigacion.png",
@@ -57,7 +57,7 @@
         "file": "desktop-footer-7.png",
         "section": "footer-7",
         "height": 201,
-        "fileSize": "10KB"
+        "fileSize": "9KB"
       }
     ],
     "pageHeight": 5161
@@ -69,7 +69,7 @@
     },
     "full": {
       "file": "mobile-full.png",
-      "fileSize": "499KB"
+      "fileSize": "498KB"
     },
     "sections": [
       {
@@ -88,7 +88,7 @@
         "file": "mobile-trayectoria.png",
         "section": "trayectoria",
         "height": 1182,
-        "fileSize": "58KB"
+        "fileSize": "57KB"
       },
       {
         "file": "mobile-formacion.png",
@@ -118,7 +118,7 @@
         "file": "mobile-footer-7.png",
         "section": "footer-7",
         "height": 201,
-        "fileSize": "9KB"
+        "fileSize": "8KB"
       }
     ],
     "pageHeight": 7571
